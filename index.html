@@ -69,6 +69,18 @@
       display: none;
       margin-top: 0.5rem;
     }
+    .cta-button {
+      display: inline-block;
+      background-color: #4b9cd3;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 1rem auto;
+      text-align: center;
+    }
     a {
       color: #4b9cd3;
       font-weight: bold;
@@ -78,6 +90,19 @@
       text-align: center;
       padding: 1rem;
       background-color: #e3eaf2;
+    }
+    .why-me {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .why-me div {
+      flex: 1 1 220px;
+      text-align: center;
+      background: #f0f4f8;
+      padding: 1rem;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -93,6 +118,10 @@
   </header>
 
   <main>
+    <div style="text-align:center">
+      <a href="https://calendly.com/" target="_blank" class="cta-button">👉 Reserva tu primera sesión</a>
+    </div>
+
     <section id="about">
       <h2>Sobre mí</h2>
       <p id="about-text">
@@ -128,6 +157,21 @@
           <h3><strong>Clases de Español</strong></h3>
           <p class="description" id="s5">Para personas no nativas, de cualquier edad. Aprende con una hablante nativa.</p>
         </div>
+        <div class="card" onclick="toggleDescription(this)">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Academic_tutoring_icon.png/320px-Academic_tutoring_icon.png" alt="Tutoring">
+          <h3><strong>Tutorías Académicas</strong></h3>
+          <p class="description" id="s6">Tutorías en Matemáticas, Química, Biología, clases de ingeniería y estrategias para aprender a aprender.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>¿Por qué conmigo?</h2>
+      <div class="why-me">
+        <div>🎓 Experiencia Ivy League</div>
+        <div>🌍 Bilingüe y multicultural</div>
+        <div>💃 Swing Dancer y educadora</div>
+        <div>👩‍🔬 Ciencia + arte + comunicación</div>
       </div>
     </section>
 
@@ -136,7 +180,7 @@
       <p id="booking-text">
         Las sesiones pueden ser de 30 minutos o 1 hora por Zoom. Puedes reservar directamente usando el siguiente enlace:
       </p>
-      <p><a href="https://calendly.com/" target="_blank">Reservar en Calendly</a></p>
+      <iframe src="https://calendly.com/" width="100%" height="600" frameborder="0"></iframe>
     </section>
   </main>
 
