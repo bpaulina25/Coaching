@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coaching Personalizado - Paulina Bargallo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #fdfdfd;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #fce8d5;
+      padding: 2rem;
+      text-align: center;
+      color: #222;
+    }
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    nav button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      background-color: #4b9cd3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    a {
+      color: #4b9cd3;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #e3eaf2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Coaching Personalizado con Paulina Bargallo</h1>
+    <p id="subtitle">Clases uno a uno para aprender, mejorar y alcanzar tus metas</p>
+  </header>
+
+  <nav>
+    <button onclick="toggleLanguage('es')">Español</button>
+    <button onclick="toggleLanguage('en')">English</button>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p id="about-text">
+        Soy Paulina Bargallo, ingeniera biomédica con experiencia en investigación, enseñanza, y danza. Me apasiona compartir mis conocimientos de forma accesible y personalizada. Ofrezco sesiones adaptadas a tus necesidades específicas, enfocadas en ayudarte a alcanzar tus metas académicas, lingüísticas o artísticas.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="services-title">Servicios</h2>
+      <ul>
+        <li id="s1"><strong>Aprende Lindy Hop:</strong> Técnica, historia, y expresión musical del swing (para todas las edades).</li>
+        <li id="s2"><strong>Aplicaciones a universidades en EE.UU. y Canadá:</strong> Estrategias para estudiantes de preparatoria.</li>
+        <li id="s3"><strong>Cómo ser estudiante internacional en EE.UU. e Ivy Leagues:</strong> Consejos prácticos (estudiantes de preparatoria).</li>
+        <li id="s4"><strong>Clases de inglés (TKT):</strong> Instrucción personalizada para todas las edades y niveles.</li>
+        <li id="s5"><strong>Clases de español:</strong> Para personas no nativas de cualquier edad.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="booking">Reserva una sesión</h2>
+      <p id="booking-text">
+        Las sesiones pueden ser de 30 minutos o 1 hora por Zoom. Puedes reservar directamente usando el siguiente enlace:
+      </p>
+      <p><a href="https://calendly.com/" target="_blank">Reservar en Calendly</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p id="footer-text">© 2025 Paulina Bargallo | Coaching Personalizado</p>
+  </footer>
+
+  <script>
+    const translations = {
+      es: {
+        title: "Coaching Personalizado con Paulina Bargallo",
+        subtitle: "Clases uno a uno para aprender, mejorar y alcanzar tus metas",
+        aboutText: "Soy Paulina Bargallo, ingeniera biomédica con experiencia en investigación, enseñanza, y danza. Me apasiona compartir mis conocimientos de forma accesible y personalizada. Ofrezco sesiones adaptadas a tus necesidades específicas, enfocadas en ayudarte a alcanzar tus metas académicas, lingüísticas o artísticas.",
+        servicesTitle: "Servicios",
+        s1: "Aprende Lindy Hop: Técnica, historia, y expresión musical del swing (para todas las edades).",
+        s2: "Aplicaciones a universidades en EE.UU. y Canadá: Estrategias para estudiantes de preparatoria.",
+        s3: "Cómo ser estudiante internacional en EE.UU. e Ivy Leagues: Consejos prácticos (estudiantes de preparatoria).",
+        s4: "Clases de inglés (TKT): Instrucción personalizada para todas las edades y niveles.",
+        s5: "Clases de español: Para personas no nativas de cualquier edad.",
+        booking: "Reserva una sesión",
+        bookingText: "Las sesiones pueden ser de 30 minutos o 1 hora por Zoom. Puedes reservar directamente usando el siguiente enlace:",
+        footerText: "© 2025 Paulina Bargallo | Coaching Personalizado"
+      },
+      en: {
+        title: "Personalized Coaching with Paulina Bargallo",
+        subtitle: "One-on-one lessons to learn, grow, and achieve your goals",
+        aboutText: "I'm Paulina Bargallo, a biomedical engineer with experience in research, teaching, and dance. I'm passionate about sharing knowledge in an accessible and personalized way. I offer sessions tailored to your specific needs, helping you achieve your academic, language, or artistic goals.",
+        servicesTitle: "Services",
+        s1: "Start Learning Lindy Hop: Dance technique, history, and musicality (all ages).",
+        s2: "University Applications (US & Canada): Strategies for high school students.",
+        s3: "Being an International Student in the US/Ivy League: Guidance for high school students.",
+        s4: "English Lessons (TKT-certified): Personalized instruction for all levels and ages.",
+        s5: "Spanish Lessons: For non-native speakers of any age.",
+        booking: "Book a Session",
+        bookingText: "Sessions can be 30 minutes or 1 hour via Zoom. Book directly using the link below:",
+        footerText: "© 2025 Paulina Bargallo | Personalized Coaching"
+      }
+    };
+
+    function toggleLanguage(lang) {
+      const t = translations[lang];
+      document.getElementById("title").innerText = t.title;
+      document.getElementById("subtitle").innerText = t.subtitle;
+      document.getElementById("about-text").innerText = t.aboutText;
+      document.getElementById("services-title").innerText = t.servicesTitle;
+      document.getElementById("s1").innerText = t.s1;
+      document.getElementById("s2").innerText = t.s2;
+      document.getElementById("s3").innerText = t.s3;
+      document.getElementById("s4").innerText = t.s4;
+      document.getElementById("s5").innerText = t.s5;
+      document.getElementById("booking").innerText = t.booking;
+      document.getElementById("booking-text").innerText = t.bookingText;
+      document.getElementById("footer-text").innerText = t.footerText;
+    }
+  </script>
+</body>
+</html>
